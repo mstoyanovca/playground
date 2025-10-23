@@ -31,7 +31,7 @@ public class RestApplication {
         };
     }
 
-    static void main(String[] args) throws InterruptedException {
+    static void main(String[] args) {
         SpringApplication.run(RestApplication.class, args);
     }
 }
