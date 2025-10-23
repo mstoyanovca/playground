@@ -1,4 +1,4 @@
-package rest;
+package redis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import rest.service.Receiver;
+import redis.service.Receiver;
 
 @EnableScheduling
 @SpringBootApplication
