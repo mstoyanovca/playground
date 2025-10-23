@@ -11,10 +11,8 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import redis.service.Receiver;
 
-@EnableScheduling
 @SpringBootApplication
 public class RedisApplication {
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisApplication.class);
