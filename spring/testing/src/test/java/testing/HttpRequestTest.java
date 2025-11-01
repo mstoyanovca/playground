@@ -1,4 +1,4 @@
-package testing_web_layer;
+package testing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

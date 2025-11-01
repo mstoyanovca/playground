@@ -6,10 +6,10 @@ plugins {
 }
 
 springBoot {
-    mainClass = 'testing_web_layer.TestingWebLayerApplication'
+    mainClass = 'testing.TestingWebLayerApplication'
 }
 
-group = 'testing_web_layer'
+group = 'testing'
 version = '0.0.1-SNAPSHOT'
 
 java {

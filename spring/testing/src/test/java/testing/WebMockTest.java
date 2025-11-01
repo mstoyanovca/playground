@@ -1,12 +1,12 @@
-package testing_web_layer;
+package testing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import testing_web_layer.controller.GreetingController;
-import testing_web_layer.service.GreetingService;
+import testing.controller.GreetingController;
+import testing.service.GreetingService;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.mockito.Mockito.when;

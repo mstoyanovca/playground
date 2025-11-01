@@ -1,11 +1,11 @@
-package testing_web_layer;
+package testing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestingWebLayerApplication {
+public class TestingApplication {
     static void main(String[] args) {
-        SpringApplication.run(TestingWebLayerApplication.class, args);
+        SpringApplication.run(TestingApplication.class, args);
     }
 }

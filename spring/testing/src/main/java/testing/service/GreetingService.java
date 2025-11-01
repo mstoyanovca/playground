@@ -1,4 +1,4 @@
-package testing_web_layer.service;
+package testing.service;
 
 import org.springframework.stereotype.Service;
 
