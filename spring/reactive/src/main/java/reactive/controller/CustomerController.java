@@ -39,6 +39,7 @@ public class CustomerController {
 
     @GetMapping(path = "/all")
     public List<Customer> findAll() {
+        // http://localhost:8080/customer/all
         return customerRepository.findAll();
     }
 }
