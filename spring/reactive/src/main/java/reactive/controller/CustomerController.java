@@ -33,7 +33,7 @@ public class CustomerController {
     @GetMapping(path = "/create")
     public Mono<Customer> create(@RequestParam String firstName, @RequestParam String lastName) {
         // http://localhost:8080/customer/create?firstName=Martin&lastName=Stoyanov
-        Customer customer = new Customer(firstName, lastName);
+        Customer customer = new Customer(null, firstName, lastName);
         LOGGER.info("Created a customer from GET: {}", customer);
         return customerRepository.save(customer);
     }
