@@ -9,16 +9,18 @@
 * install Node.js
 * reboot
 * check Node.js installation from Git Bash:
-  - (node -v)
-  - (npm -v)
+  - node -v
+  - npm -v
 * install Angular CLI:
-  - (npm install -g @angular/cli)
+  - npm install -g @angular/cli
 * create a new Angular project:
-  - (ng new front-end)
+  - ng new front-end
 * start the application:
-  - (ng serve)
+  - ng serve
 * open at  http://localhost:4200/
 * other useful commands:
+  - git clone githuburl
+  - npm install
   - ng generate component my-component
   - ng generate service my-service
   - npm start npx kill-port 4200
