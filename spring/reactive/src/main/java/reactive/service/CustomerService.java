@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import reactive.entity.Customer;
 import reactive.repository.CustomerRepository;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.stream.IntStream;
@@ -24,9 +25,20 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    public Mono<Customer> save(Customer customer) {
+        LOGGER.info("save({})", customer);
+        return customerRepository.save(customer);
+    }
+
+    public Flux<Customer> findAll() {
+        LOGGER.info("findAll()");
+        return customerRepository.findAll();
+    }
+
+
     @Transactional
-    public Flux<Customer> createCustomers() {
-        LOGGER.info("createCustomers()");
+    public Flux<Customer> loadTest() {
+        LOGGER.info("loadTest()");
 
         List<Customer> customers = IntStream
                 .rangeClosed(1, QUANTITY)

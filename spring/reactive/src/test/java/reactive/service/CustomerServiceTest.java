@@ -23,12 +23,41 @@ public class CustomerServiceTest {
     @InjectMocks
     private CustomerService service;
 
-    private static final int QUANTITY = 1000;
+    @Test
+    public void saveTest() {
+        Customer customer = new Customer(1L, "firstName", "lastName");
+
+        when(repository.save(customer)).thenReturn(Mono.just(customer));
+
+        StepVerifier
+                .create(service.save(customer))
+                .expectNextMatches(c -> c.id() == 1L && c.firstName().equals("firstName") && c.lastName().equals("lastName"))
+                .verifyComplete();
+
+        verify(repository, times(1)).save(customer);
+    }
 
     @Test
-    public void createCustomersTest() {
+    public void findAllTest() {
+        Customer customer1 = new Customer(1L, "firstName1", "lastName1");
+        Customer customer2 = new Customer(2L, "firstName2", "lastName2");
+
+        when(repository.findAll()).thenReturn(Flux.just(customer1, customer2));
+
+        StepVerifier
+                .create(service.findAll())
+                .expectNextMatches(c -> c.id() == 1L && c.firstName().equals("firstName1") && c.lastName().equals("lastName1"))
+                .expectNextMatches(c -> c.id() == 2L && c.firstName().equals("firstName2") && c.lastName().equals("lastName2"))
+                .verifyComplete();
+
+        verify(repository, times(1)).findAll();
+    }
+
+    @Test
+    public void loadTestTest() {
+        final int quantity = 1000;
         List<Customer> customers = IntStream
-                .rangeClosed(1, QUANTITY)
+                .rangeClosed(1, quantity)
                 .boxed()
                 .map(i -> new Customer(null, "firstname" + i, "lastname" + i))
                 .toList();
@@ -38,7 +67,7 @@ public class CustomerServiceTest {
         when(repository.findAll()).thenReturn(Flux.fromIterable(customers));
 
         StepVerifier
-                .create(service.createCustomers())
+                .create(service.loadTest())
                 .expectNextCount(1000)
                 .verifyComplete();
 
