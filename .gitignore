@@ -6,3 +6,6 @@ spring/*/.gradle/
 spring/*/.idea/
 spring/*/build/
 spring/oauth2/src/main/resources/application.properties
+spring/*/front-end/.angular
+spring/*/front-end/.vscode
+spring/*/front-end/node_modules
