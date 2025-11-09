@@ -11,6 +11,6 @@ Spring Boot testing:
   -- @WebTestClient is for reactive applications;
 - @AutoConfigureTestDatabase, @AutoConfigureMockMvc, @AutoConfigureDataJpa, @BeforeEach, @AfterEach, @TestConfiguration,
   @Import(MyTestConfiguration.class), @ConfigurationProperties(prefix = "my"), @ActiveProfiles("test");
-- @MockBean and @SpyBean:
-  -- @MockBean replaces the bean entirely;
-  -- @SpyBean keeps the original bean's functionality, except for where you explicitly stub or mock a method;
+- @MockitoBean and @MockitoSpyBean:
+  -- @MockitoBean replaces the bean entirely;
+  -- @MockitoSpyBean keeps the original bean's functionality, except for where you explicitly stub or mock a method;
