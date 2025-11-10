@@ -2,7 +2,7 @@
 ## created for academic purposes
 ### Martin Stoyanov, VA3AUI, November 2025
 
-# Features:
+# Technology stack:
 * Spring Boot
 * Spring Security
 * Spring Data
