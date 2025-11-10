@@ -1,8 +1,8 @@
 # Java/Spring Boot/Angular application with JWT login
-## created for academic purposes
+### created for academic purposes
 ### Martin Stoyanov, VA3AUI, November 2025
 
-# Technology stack:
+## Technology stack:
 * Spring Boot
 * Spring Security
 * Spring Data
@@ -11,7 +11,7 @@
 * Bootstrap
 * Angular
 
-# Create Angular front end:
+## Create Angular front end:
 * download the latest Node.js LTS version
 * install Node.js
 * reboot
