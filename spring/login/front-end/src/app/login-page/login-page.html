@@ -6,13 +6,33 @@
                 <div class="col-lg-6 col-md-12" style="min-width: 576px">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control form-control-sm" required>
+                        <input type="email" id="email" name="email" [(ngModel)]="user.email" #email="ngModel"
+                               class="form-control form-control-sm" email required>
+                        @if (email.errors && (email.dirty || email.touched)) {
+                        <div class="alert alert-danger alert-small mt-2">
+                            @if (email.errors['required']) {
+                            <div>Email is required</div>
+                            }
+                            @if (email.errors['email']) {
+                            <div>Email is invalid</div>
+                            }
+                        </div>
+                        }
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control form-control-sm" required>
+                        <input type="password" id="password" name="password" [(ngModel)]="user.password"
+                               #password="ngModel" class="form-control form-control-sm" required>
+                        @if (password.invalid && (password.dirty || password.touched)) {
+                        <div class="alert alert-danger alert-small mt-2">
+                            @if (password.hasError('required')) {
+                            <div>Password is required</div>
+                            }
+                        </div>
+                        }
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sm" [disabled]="!loginForm.form.valid">Login</button>
+                    <button type="submit" class="btn btn-primary btn-sm" [disabled]="!loginForm.form.valid">Login
+                    </button>
                 </div>
             </div>
         </fieldset>

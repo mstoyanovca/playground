@@ -11,10 +11,11 @@ import { User } from '../model/user';
   styleUrl: './login-page.css',
 })
 export class LoginPage {
-    user = new User(1, 'a@a.com', 'password');
+    user = new User(1, '', '');
     submitted = false;
 
     onSubmit() {
+        console.log('onSubmit()');
         this.submitted = true;
     }
 }
