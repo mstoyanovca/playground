@@ -1,5 +1,5 @@
 <div class="container-md" xmlns="http://www.w3.org/1999/html">
-    <form #loginForm="ngForm" class="mt-3">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="mt-3">
         <fieldset>
             <legend>PLease enter your credentials:</legend>
             <div class="row">
