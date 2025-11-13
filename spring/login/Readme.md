@@ -3,13 +3,13 @@
 ### Martin Stoyanov, VA3AUI, November 2025
 
 ## Technology stack:
-* Spring Boot
-* Spring Security
-* Spring Data
-* Docker Desktop
-* MySQL
-* Bootstrap
-* Angular
+- Spring Boot
+- Spring Security
+- Spring Data
+- Docker Desktop
+- MySQL
+- Bootstrap
+- Angular
 
 ## Create Angular front end:
 - download the latest Node.js LTS version
@@ -30,8 +30,7 @@
   - npm install
   - ng generate component my-component
   - ng generate service my-service
-  - npm install bootstrap
-  - add to angular.json:
+  - npm install bootstrap, then add to angular.json:
     - "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     - "./node_modules/bootstrap/dist/css/bootstrap.min.css"
   - npm start npx kill-port 4200

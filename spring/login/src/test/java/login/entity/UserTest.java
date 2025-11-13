@@ -1,4 +1,4 @@
-package login.model;
+package login.entity;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
