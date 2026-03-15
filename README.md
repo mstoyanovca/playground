@@ -1,1 +1,1 @@
-Java SE and Spring Boot latest features playground
+### Java SE, Spring Boot and Angular latest features playground
