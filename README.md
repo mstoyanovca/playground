@@ -1,4 +1,4 @@
-### Java SE, Spring Boot and Angular latest features playground
+### Spring Boot latest features playground
 
 - Spring Boot with GraphQL
 - Spring Boot with MongoDB

@@ -1,0 +1,6 @@
+### OAuth2
+
+- this app uses GitHub or Google SSO login;
+- it requires setting up an app on GitHub and Google;
+- application.properties with GitHub and Google client-id and client-secret are not included in the GitHub push;
+- http://localhost:8080
